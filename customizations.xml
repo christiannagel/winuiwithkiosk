@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsCustomizations>
+  <PackageConfig xmlns="urn:schemas-Microsoft-com:Windows-ICD-Package-Config.v1.0">
+    <ID>{0e994327-7350-41a9-9064-170bb389062c}</ID>
+    <Name>Kanis2023v2</Name>
+    <Version>1.19</Version>
+    <OwnerType>OEM</OwnerType>
+    <Rank>0</Rank>
+    <Notes></Notes>
+  </PackageConfig>
+  <Settings xmlns="urn:schemas-microsoft-com:windows-provisioning">
+    <Customizations>
+      <Common>
+        <Accounts>
+          <Users>
+            <User UserName="WKN">
+              <Password>myPW</Password>
+              <UserGroup>Standard Users</UserGroup>
+            </User>
+            <User UserName="admwkn">
+              <Password>myPW</Password>
+              <UserGroup>Standard Users</UserGroup>
+            </User>
+          </Users>
+        </Accounts>
+        <AssignedAccess>
+          <AssignedAccessSettings>{"Account":".\WKN", "AUMID":"AppName"}</AssignedAccessSettings>
+        </AssignedAccess>
+        <DeviceFormFactor>
+          <DeviceForm>Kiosk</DeviceForm>
+        </DeviceFormFactor>
+        <Policies>
+          <ApplicationManagement>
+            <AllowAllTrustedApps>Yes</AllowAllTrustedApps>
+          </ApplicationManagement>
+          <Power>
+            <AllowHibernate>Not allowed</AllowHibernate>
+            <AllowStandbyStatesWhenSleepingOnBattery>Do not allow</AllowStandbyStatesWhenSleepingOnBattery>
+            <AllowStandbyWhenSleepingPluggedIn>Do not allow</AllowStandbyWhenSleepingPluggedIn>
+            <RequirePasswordWhenComputerWakesOnBattery>Disable</RequirePasswordWhenComputerWakesOnBattery>
+            <RequirePasswordWhenComputerWakesPluggedIn>Disable</RequirePasswordWhenComputerWakesPluggedIn>
+            <SelectPowerButtonActionOnBattery>Shut down</SelectPowerButtonActionOnBattery>
+            <SelectPowerButtonActionPluggedIn>Shut down</SelectPowerButtonActionPluggedIn>
+          </Power>
+        </Policies>
+        <SMISettings>
+          <AutoLogon>
+            <Enable>ENABLE</Enable>
+            <Password>myPW</Password>
+            <UserName>WKN</UserName>
+          </AutoLogon>
+          <ShellLauncher>
+            <DefaultCustomShell>explorer.exe</DefaultCustomShell>
+            <UserSpecificSettings>
+              <LocalUserSpecificSettings>
+                <LocalUserShellSetting Username="ADMwkn" Name="ADMwkn">
+                  <UserCustomShell>explorer.exe</UserCustomShell>
+                </LocalUserShellSetting>
+                <LocalUserShellSetting Username="WKN">
+                  <UserCustomShell>D:\Kanis2023 Preview</UserCustomShell>
+                </LocalUserShellSetting>
+              </LocalUserSpecificSettings>
+            </UserSpecificSettings>
+          </ShellLauncher>
+        </SMISettings>
+        <SharedPC>
+          <PolicyCustomization>
+            <SignInOnResume>False</SignInOnResume>
+          </PolicyCustomization>
+        </SharedPC>
+        <TabletMode>
+          <SignInMode>Tablet mode</SignInMode>
+        </TabletMode>
+      </Common>
+    </Customizations>
+  </Settings>
+</WindowsCustomizations>
