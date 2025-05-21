@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WknWinuiKioskApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WknWinuiKioskApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
